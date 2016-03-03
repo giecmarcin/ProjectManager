@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="common" template="/WEB-INF/layouts/layout.jsp">
+        <put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp"/>
+        <put-attribute name="registerModal" value="/register"/>
+    </definition>
+
+    <definition name="register" template="/WEB-INF/pages/register.jsp"/>
+
+    <definition name="index" extends="common">
+        <put-attribute name="title" value="PM - Strona głowna"/>
+        <put-attribute name="body" value="/WEB-INF/pages/index.jsp"/>
+        <put-attribute name="current" value="index"/>
+    </definition>
+
+    <!--<definition name="register" extends="common">-->
+    <!--<put-attribute name="title" value="PM - Rejestracja"/>-->
+    <!--<put-attribute name="body" value="/WEB-INF/pages/register.jsp"/>-->
+    <!--<put-attribute name="current" value="register"/>-->
+    <!--</definition>-->
+
+    <definition name="login" extends="common">
+        <put-attribute name="title" value="PM - Logowanie"/>
+        <put-attribute name="body" value="/WEB-INF/pages/login.jsp"/>
+        <put-attribute name="current" value="login"/>
+    </definition>
+
+    <definition name="errorAccess" extends="common">
+        <put-attribute name="title" value="PM - Error"/>
+        <put-attribute name="body" value="/WEB-INF/pages/errorAccess.jsp"/>
+        <put-attribute name="current" value="errorAccess"/>
+    </definition>
+
+    <definition name="users" extends="common">
+        <put-attribute name="title" value="PM - Users"/>
+        <put-attribute name="body" value="/WEB-INF/pages/users.jsp"/>
+        <put-attribute name="current" value="users"/>
+        <put-attribute name="registerModal" value="/register" cascade="true"/>
+    </definition>
+
+    <definition name="addProject" extends="common">
+        <put-attribute name="title" value="PM - addProject"/>
+        <put-attribute name="body" value="/WEB-INF/pages/addProject.jsp"/>
+        <put-attribute name="current" value="addProject"/>
+    </definition>
+
+    <definition name="yourProjects" extends="common">
+        <put-attribute name="title" value="PM - yourProjects"/>
+        <put-attribute name="body" value="/WEB-INF/pages/yourProjects.jsp"/>
+        <put-attribute name="current" value="yourProjects"/>
+    </definition>
+
+    <definition name="projectDetails" extends="common">
+        <put-attribute name="title" value="PM - projectDetails"/>
+        <put-attribute name="body" value="/WEB-INF/pages/projectDetails.jsp"/>
+        <put-attribute name="current" value="projectDetails"/>
+    </definition>
+
+    <definition name="addTask" extends="common">
+        <put-attribute name="title" value="PM - addTask"/>
+        <put-attribute name="body" value="/WEB-INF/pages/addTask.jsp"/>
+        <put-attribute name="current" value="addTask"/>
+    </definition>
+
+    <definition name="allInvitation" extends="common">
+        <put-attribute name="title" value="PM - allInvitation"/>
+        <put-attribute name="body" value="/WEB-INF/pages/allInvitation.jsp"/>
+        <put-attribute name="current" value="allInvitation"/>
+    </definition>
+
+    <definition name="otherProjects" extends="common">
+        <put-attribute name="title" value="PM - projectDetails"/>
+        <put-attribute name="body" value="/WEB-INF/pages/otherProjects.jsp"/>
+        <put-attribute name="current" value="otherProjects"/>
+    </definition>
+
+    <definition name="status" extends="common">
+        <put-attribute name="title" value="PM - status"/>
+        <put-attribute name="body" value="/WEB-INF/pages/status.jsp"/>
+        <put-attribute name="current" value="otherProjects"/>
+    </definition>
+
+    <definition name="editUser" extends="common">
+        <put-attribute name="title" value="PM - Edycja"/>
+        <put-attribute name="body" value="/WEB-INF/pages/editUser.jsp"/>
+        <put-attribute name="current" value="editUser"/>
+    </definition>
+
+</tiles-definitions>
